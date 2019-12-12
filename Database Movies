@@ -1,0 +1,24 @@
+CREATE DATABASE movietime;
+
+USE movietime;
+
+CREATE TABLE movies (
+movie_id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+title NVARCHAR(30) NOT NULL,
+genre NVARCHAR(10) NOT NULL,
+year INT(4) NOT NULL,
+director NVARCHAR(20) NOT NULL,
+duration NVARCHAR(5) NOT NULL,
+session NVARCHAR(5) NOT NULL,
+photo IMAGE NOT NULL,
+PRIMARY KEY (movie_id)
+);
+
+INSERT INTO movies
+(title, genre, year, director, duration, session, photo)
+VALUES 
+('Joker', 'Thriller', 2019, ‘Todd Phillips’, ‘122 min’, ‘22:00’, select  * from OpenRowset(Bulk ‘C:\Users\Mila\Pictures\movietime\joker.jpg’, Single_Blob) As photo),
+('El tiempo contigo', 'Animation', 2019, ‘Makoto Shinkai’, ‘114 min’, ‘15:00’, select  * from OpenRowset(Bulk ‘C:\Users\Mila\Pictures\movietime\tiempocontigo.jpg’, Single_Blob) As photo),
+('Avengers: Endgamer', 'Action', 2019, ‘Anthony y Joe Russo’, ‘181 min’, ‘17:00’, select  * from OpenRowset(Bulk ‘C:\Users\Mila\Pictures\movietime\avenger.jpg’, Single_Blob) As photo),
+('Erase una vez en Hollywood', 'Comedy', 2019, ‘Quentin Tarantino’, ‘159 min’, ‘19:30’, select  * from OpenRowset(Bulk ‘C:\Users\Mila\Pictures\movietime\hollywood.jpg’, Single_Blob) As photo),
+('It', 'Thriller', 2019, ‘Andrés Muschietti’, ‘169 min’, ‘23:59’, select  * from OpenRowset(Bulk ‘C:\Users\Mila\Pictures\movietime\it.jpg’, Single_Blob) As photo);
