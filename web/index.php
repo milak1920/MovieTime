@@ -6,7 +6,7 @@ $page_title = 'MovieTime!';
 include('includes/header.php');
 ?>
 
-<div class="page-header"><h1>Premieres</h1></div>
+<div class="page-header"><h1>Cinema Listings</h1></div>
 
 
 <?php
