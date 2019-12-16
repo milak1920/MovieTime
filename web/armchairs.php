@@ -4,7 +4,7 @@
 
 <form action="purchase.php" method="post">
   <h2>Select the number of tickets</h2>
-  <select id="tickets">
+  <select name="tickets">
     <option value="1">1</option>
     <option value="2">2</option>
     <option value="3">3</option>
