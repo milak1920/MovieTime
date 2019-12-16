@@ -1,4 +1,5 @@
 <?php # armchairs.php #3
+?>
 
 <form action="" method="post">
   <select id="tickets">
@@ -15,4 +16,5 @@
   </select>
 </form>
 
+<?php
 ?>
