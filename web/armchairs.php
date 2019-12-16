@@ -1,4 +1,5 @@
 <?php # armchairs.php #3
+include('includes/header.php');
 ?>
 <h1>Tickets and armchairs</h1>
 
@@ -22,4 +23,5 @@
 </form>
 
 <?php
+include('includes/footer.html');
 ?>
