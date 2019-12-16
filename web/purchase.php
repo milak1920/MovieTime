@@ -43,8 +43,8 @@ function delete(){
 			<td align="left">' . $row['title'] . '</td>
 			<td align="left">' . $row['genre'] . '</td>
 			<td align="left">' . $row['session'] . '</td>
-      <td align="left"></td>
-      <td align="left"></td>
+      			<td align="left">'.$_POST['tickets'].'</td>
+      			<td align="left">'.$_POST['armchairs'].'</td>
 		</tr>
 		';
 	}
