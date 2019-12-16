@@ -7,6 +7,30 @@ include('includes/header.php');
 ?>
 
 <div class="page-header"><h1>Cinema Listings</h1></div>
+<?php
+require('../mysqli_connect.php');
+
+// Define the query:
+$m = "SELECT title, genre, year, director, duration, session FROM movies";
+$s = @mysqli_query($dbm, $m);
+
+// Count the number of returned rows:
+$num = mysqli_num_rows($s);
+
+if ($num > 0) { // If it ran OK, display the records.
+  while ($row = mysqli_fetch_array($s, MYSQLI_ASSOC)) {
+    echo '<div>
+      <img src="">
+      <p>' . $row['title'] . '</p>
+      <p>' . $row['genre'] . '</p>
+      <p>' . $row['year'] . '</p>
+      <p>' . $row['director'] . '</p>
+      <p>' . $row['duration'] . '</p>
+      <p>' . $row['session'] . '</p>
+    </div>';
+  }
+}
+?>
 
 
 <?php
