@@ -1,7 +1,7 @@
 <?php # armchairs.php #3
 ?>
 
-<form action="" method="post">
+<form action="purchase.php" method="post">
   <select id="tickets">
     <option value="1">1</option>
     <option value="2">2</option>
@@ -14,6 +14,7 @@
     <option value="9">9</option>
     <option value="10">10</option>
   </select>
+  <input type="submit" value="Send">
 </form>
 
 <?php
