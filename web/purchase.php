@@ -39,7 +39,7 @@ function delete(){
 	// Fetch and print all the records:
 	while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 		echo '<tr>
-			<td align="left"><input="button" onclick="delete()">Delete</td>
+			<td align="left"><input type="button" onclick="delete()">Delete</td>
 			<td align="left">' . $row['title'] . '</td>
 			<td align="left">' . $row['genre'] . '</td>
 			<td align="left">' . $row['session'] . '</td>
