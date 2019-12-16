@@ -21,7 +21,7 @@
 		<div class="navbar-header"><a class="navbar-brand" href="#">Your Website</a></div>
 		<div id="navbar" class="collapse navbar-collapse">
 		<ul class="nav navbar-nav">
-			<li <?php if ($actual == "index") echo "class=\"active\""; ?>><a href="index.php">>Cinema listings</a></li>
+			<li <?php if ($actual == "index") echo "class=\"active\""; ?>><a href="index.php">Cinema listings</a></li>
 			<li <?php if ($actual == "armchairs") echo "class=\"active\""; ?>><a href="armchairs.php">Armchairs</a></li>
 			<li <?php if ($actual == "purchase") echo "class=\"active\""; ?>><a href="purchase.php">Purchase</a></li>
 		</ul>
