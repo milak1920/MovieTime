@@ -21,12 +21,12 @@ if ($num > 0) { // If it ran OK, display the records.
   while ($row = mysqli_fetch_array($s, MYSQLI_ASSOC)) {
     echo '<div>
       <img src="">
-      <h2>Title: ' . $row['title'] . '</h2>
-      <p>Genre: ' . $row['genre'] . '</p>
-      <p>Year: ' . $row['year'] . '</p>
-      <p>Director: ' . $row['director'] . '</p>
-      <p>Duration: ' . $row['duration'] . '</p>
-      <p>Session: ' . $row['session'] . '</p>
+      <h2>' . $row['title'] . '</h2>
+      <p><strong>Genre:</strong> ' . $row['genre'] . '</p>
+      <p><strong>Year:</strong> ' . $row['year'] . '</p>
+      <p><strong>Director:</strong> ' . $row['director'] . '</p>
+      <p><strong>Duration:</strong> ' . $row['duration'] . '</p>
+      <p><strong>Session:</strong> ' . $row['session'] . '</p>
     </div>';
   }
 }
