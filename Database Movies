@@ -33,6 +33,25 @@ PRIMARY KEY (armchair_id)
 INSERT INTO armchairs
 (image)
 VALUES
+('images/libre.jpg'),
+('images/libre.jpg'),
+('images/libre.jpg'),
+('images/libre.jpg'),
+('images/libre.jpg'),
+('images/libre.jpg'),
+('images/libre.jpg'),
+('images/libre.jpg'),
+('images/libre.jpg'),
+('images/libre.jpg'),
+('images/libre.jpg'),
+('images/libre.jpg'),
+('images/libre.jpg'),
+('images/libre.jpg'),
+('images/libre.jpg'),
+('images/libre.jpg'),
+('images/libre.jpg'),
+('images/libre.jpg'),
+('images/libre.jpg'),
 ('images/libre.jpg');
 
 CREATE TABLE purchase (
