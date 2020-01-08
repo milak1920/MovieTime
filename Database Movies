@@ -23,3 +23,9 @@ VALUES
 ('Avengers: Endgamer', 'Action', 2019, ‘Anthony y Joe Russo’, ‘181 min’, ‘17:00’,‘images/avenger.jpg’),
 ('Erase una vez en Hollywood', 'Comedy', 2019, ‘Quentin Tarantino’, ‘159 min’, ‘19:30’,‘images/hollywood.jpg’),
 ('It', 'Thriller', 2019, ‘Andrés Muschietti’, ‘169 min’, ‘23:59’,‘images/it.jpg’);
+
+CREATE TABLE armchairs (
+armchair_id INT NOT NULL AUTO_INCREMENT,
+image VARCHAR(200) NOT NULL
+PRIMARY KEY (armchair_id)
+);
