@@ -33,4 +33,4 @@ PRIMARY KEY (armchair_id)
 INSERT INTO armchairs
 (image)
 VALUES
-('')
+('images/libre.jpg');
