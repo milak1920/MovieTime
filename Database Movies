@@ -11,14 +11,15 @@ year INT(4) NOT NULL,
 director VARCHAR(20) NOT NULL,
 duration VARCHAR(5) NOT NULL,
 session VARCHAR(5) NOT NULL,
+photo VARCHAR(200) NOT NULL,
 PRIMARY KEY (movie_id)
 );
 
 INSERT INTO movies
-(title, genre, year, director, duration, session)
+(title, genre, year, director, duration, session, photo)
 VALUES 
-('Joker', 'Thriller', 2019, ‘Todd Phillips’, ‘122 min’, ‘22:00’),
-('El tiempo contigo', 'Animation', 2019, ‘Makoto Shinkai’, ‘114 min’, ‘15:00’),
-('Avengers: Endgamer', 'Action', 2019, ‘Anthony y Joe Russo’, ‘181 min’, ‘17:00’),
-('Erase una vez en Hollywood', 'Comedy', 2019, ‘Quentin Tarantino’, ‘159 min’, ‘19:30’),
-('It', 'Thriller', 2019, ‘Andrés Muschietti’, ‘169 min’, ‘23:59’);
+('Joker', 'Thriller', 2019, ‘Todd Phillips’, ‘122 min’, ‘22:00’,‘images/joker.jpg’),
+('El tiempo contigo', 'Animation', 2019, ‘Makoto Shinkai’, ‘114 min’, ‘15:00’,‘images/tiempocontigo.jpg’),
+('Avengers: Endgamer', 'Action', 2019, ‘Anthony y Joe Russo’, ‘181 min’, ‘17:00’,‘images/avenger.jpg’),
+('Erase una vez en Hollywood', 'Comedy', 2019, ‘Quentin Tarantino’, ‘159 min’, ‘19:30’,‘images/hollywood.jpg’),
+('It', 'Thriller', 2019, ‘Andrés Muschietti’, ‘169 min’, ‘23:59’,‘images/it.jpg’);
