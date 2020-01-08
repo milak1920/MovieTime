@@ -26,7 +26,7 @@ VALUES
 
 CREATE TABLE armchairs (
 armchair_id INT NOT NULL AUTO_INCREMENT,
-image VARCHAR(200) NOT NULL
+image VARCHAR(200) NOT NULL,
 PRIMARY KEY (armchair_id)
 );
 
@@ -34,3 +34,20 @@ INSERT INTO armchairs
 (image)
 VALUES
 ('images/libre.jpg');
+
+CREATE TABLE purchase (
+purchase_id INT NOT NULL AUTO_INCREMENT,
+movie_id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
+armchair_id INT NOT NULL AUTO_INCREMENT,
+PRIMARY KEY (purchase_id)
+);
+
+ALTER TABLE purchase
+ADD CONSTRAINT FK_movie_id
+FOREIGN KEY (movie_id) REFERENCES movies(movie_id)
+ON DELETE NO ACTION ON UPDATE CASCADE
+GO
+ALTER TABLE purchase
+ADD CONSTRAINT FK_armchair_id
+FOREIGN KEY (armchair_id) REFERENCES armchairs(armchair_id)
+ON DELETE NO ACTION ON UPDATE CASCADE
