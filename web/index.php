@@ -11,25 +11,35 @@ include('includes/header.php');
 require('../mysqli_connect.php');
 
 // Define the query:
-$m = "SELECT title, genre, year, director, duration, session FROM movies";
-$s = @mysqli_query($dbm, $m);
+$m = "SELECT title, genre, year, director, duration, session, photo FROM prueba";
+$s = @mysqli_query($dbc, $m);
 
 // Count the number of returned rows:
 $num = mysqli_num_rows($s);
 
 if ($num > 0) { // If it ran OK, display the records.
   while ($row = mysqli_fetch_array($s, MYSQLI_ASSOC)) {
-    echo '<div>
-      <img src="">
+     
+ 
+    echo '
+     
+      <div class="gallery">
+      <img src="'.$row['photo'].'"]>
+       <div class="desc">
       <h2>' . $row['title'] . '</h2>
       <p><strong>Genre:</strong> ' . $row['genre'] . '</p>
       <p><strong>Year:</strong> ' . $row['year'] . '</p>
       <p><strong>Director:</strong> ' . $row['director'] . '</p>
       <p><strong>Duration:</strong> ' . $row['duration'] . '</p>
       <p><strong>Session:</strong> ' . $row['session'] . '</p>
-    </div>';
+  </div>  </div>   ';
+
+ 
   }
 }
+ 
+ 
+  
 ?>
 
 
