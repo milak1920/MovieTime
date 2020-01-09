@@ -7,12 +7,13 @@ include('includes/header.php');
 ?>
 
 <div class="page-header"><h1>Cinema Listings</h1></div>
+ 
 <?php
 require('../mysqli_connect.php');
 
 // Define the query:
 $m = "SELECT title, genre, year, director, duration, session, photo FROM movies";
-$s = @mysqli_query($dbc, $m);
+$s = @mysqli_query($dbm, $m);
 
 // Count the number of returned rows:
 $num = mysqli_num_rows($s);
@@ -24,15 +25,17 @@ if ($num > 0) { // If it ran OK, display the records.
     echo '
      
       <div class="gallery">
-      <img src="'.$row['photo'].'"]>
-       <div class="desc">
-      <h2>' . $row['title'] . '</h2>
-      <p><strong>Genre:</strong> ' . $row['genre'] . '</p>
-      <p><strong>Year:</strong> ' . $row['year'] . '</p>
-      <p><strong>Director:</strong> ' . $row['director'] . '</p>
-      <p><strong>Duration:</strong> ' . $row['duration'] . '</p>
-      <p><strong>Session:</strong> ' . $row['session'] . '</p>
-  </div>  </div>   ';
+            <img src="'.$row['photo'].'"]>
+            <div class="desc">
+                <h2>' . $row['title'] . '</h2>
+                <p><strong>Genre:</strong> ' . $row['genre'] . '</p>
+                <p><strong>Year:</strong> ' . $row['year'] . '</p>
+                <p><strong>Director:</strong> ' . $row['director'] . '</p>
+                <p><strong>Duration:</strong> ' . $row['duration'] . '</p>
+                <p><strong>Session:</strong> ' . $row['session'] . '</p>
+            </div>
+      </div>
+      ';
 
  
   }
@@ -40,8 +43,8 @@ if ($num > 0) { // If it ran OK, display the records.
  
  
   
-?>
-
+    ?><br>
+<a href="armchairs.php">comprar</a>
 
 <?php
 include('includes/footer.html');
