@@ -11,7 +11,7 @@ include('includes/header.php');
 require('../mysqli_connect.php');
 
 // Define the query:
-$m = "SELECT title, genre, year, director, duration, session, photo FROM prueba";
+$m = "SELECT title, genre, year, director, duration, session, photo FROM movies";
 $s = @mysqli_query($dbc, $m);
 
 // Count the number of returned rows:
