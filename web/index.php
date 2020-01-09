@@ -12,7 +12,7 @@ require('../mysqli_connect.php');
 
 // Define the query:
 $m = "SELECT title, genre, year, director, duration, session, photo FROM movies";
-$s = @mysqli_query($dbc, $m);
+$s = @mysqli_query($dbm, $m);
 
 // Count the number of returned rows:
 $num = mysqli_num_rows($s);
