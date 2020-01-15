@@ -25,24 +25,4 @@ div.desc {
     height: 100%;
     
 } 
-.imagen{
-    width: 80%;
-}
-.imagendos{
-    width: 3%;
-}
-.conte{
-     width: 100%; 
-    background-color: aqua;
-}
-.b {
-    margin-top: 2%;
-  display: inline-block;
-  width: 11%;
-  height: 20%;
-  padding: 5px;
-  border: 1px solid blue;    
-   
-}
-
  
