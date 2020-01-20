@@ -8,6 +8,7 @@ include('includes/header.php');
 
 <div class="page-header"><h1>Cinema Listings</h1></div>
  
+ 
 <?php
 require('../mysqli_connect.php');
 
@@ -27,7 +28,7 @@ if ($num > 0) { // If it ran OK, display the records.
       <div class="gallery">
             <img src="'.$row['photo'].'"]>
             <div class="desc">
-                <h2>' . $row['title'] . '</h2>
+                <p class="titulo">' . $row['title'] . '</p>
                 <p><strong>Genre:</strong> ' . $row['genre'] . '</p>
                 <p><strong>Year:</strong> ' . $row['year'] . '</p>
                 <p><strong>Director:</strong> ' . $row['director'] . '</p>
@@ -41,10 +42,13 @@ if ($num > 0) { // If it ran OK, display the records.
   }
 }
  
- 
+    ?>
   
-    ?><br>
-<a href="armchairs.php">comprar</a>
+<div class="bot">
+
+<a href="armchairs.php" class="boton_personalizado">Buy tickets</a>
+</div>
+ 
 
 <?php
 include('includes/footer.html');

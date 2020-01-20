@@ -1,8 +1,8 @@
 <?php # Script 10.1 - purchase.php #3
-
+error_reporting(0);
 $page_title = 'Your tickets';
 include('includes/header.php');
-echo '<h1>Purchase</h1>';
+echo '<h1 class="principal">Purchase</h1>';
 
 require('../mysqli_connect.php');
 
@@ -53,6 +53,8 @@ if ($num > 0) { // If it ran OK, display the records.
 
 	echo '</tbody></table>';
 	mysqli_free_result ($r);
+     
+
 
 } else { // If no records were returned.
 	echo '<p class="error">There are currently no tickets.</p>';
@@ -62,4 +64,7 @@ mysqli_close($dbm);
 
 include('includes/footer.html');
 ?>
-
+<div class="error">
+    <img src="https://cdn130.picsart.com/298137588301201.gif?frame=70&to=min&r=480" width="42%">
+</div>
+ 

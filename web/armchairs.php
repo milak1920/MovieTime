@@ -6,7 +6,7 @@ require('../mysqli_connect.php');
       $m = "SELECT armchair_id, image FROM armchairs";
       $s = @mysqli_query($dbm, $m);
 ?>
-<h1>Tickets and armchairs</h1>
+<h1 class="principal">Tickets and armchairs</h1>
  
 <?php
  
@@ -52,11 +52,13 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
   <h2>Select the number of tickets</h2>
     <?php
         $tickets=range(1,20);
+    echo '<div class="caja">';
             echo '<select name="tickets">';
             foreach($tickets as $value){
                 echo "<option value=\"$value\">$value</option>\n";
             }
             echo "</select>";
+    echo '</div>';
     ?>
   <h2>Select the armchairs</h2>
   <div id="divid">
@@ -75,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
     </div><br><br>
   <input type="submit" value="Send">
 </form>
- 
+ <br>
 <script>
  var cuantosClicks = 0;
  function cambia(id){
