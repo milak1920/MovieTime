@@ -13,7 +13,7 @@
 </head>
 <body>
 <?php
- $actual = explode("/", $_SERVER[SCRIPT_NAME]);
+ $actual = explode("/", $_SERVER['SCRIPT_NAME']);
  $n = count($actual);
  $actual = $actual[$n-1];
  $actual = explode(".", $actual);
