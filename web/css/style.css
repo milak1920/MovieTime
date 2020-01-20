@@ -26,3 +26,8 @@ div.desc {
     
 } 
  
+
+.texto{ 
+ display: inline-flex;
+        width: 2.5%;
+}
