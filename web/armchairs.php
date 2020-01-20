@@ -2,55 +2,43 @@
 include('includes/header.php');
 ?>
 <h1>Tickets and armchairs</h1>
+ 
 <?php
- if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	  
-//    if (isset ($_REQUEST['tickets'])){
-//        $tickets=$_REQUEST['tickets'];
-//    } 
+ 
+if ($_SERVER["REQUEST_METHOD"]=="POST"){  
+     //creamos la cookie  
+   
     
-       
-  
-//    if ($tickets==count($armchair)){
-//        
-//       echo "<h1>Your tickets</h1>";
-//       	// Table header:
-//	echo '<table width="60%">
-//	<thead>
-//	<tr>
-//		<th align="left"><strong>Delete</strong></th>
-//		<th align="left"><strong>Title</strong></th>
-//		<th align="left"><strong>Genre</strong></th>
-//		<th align="left"><strong>Session</strong></th>
-//    <th align="left"><strong>Number of tickets</strong></th>
-//    <th align="left"><strong>Number of armchairs</strong></th>
-//	</tr>
-//	</thead>
-//	<tbody>
-//	'; 
-//        
-//        	// Fetch and print all the records:
-//	while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-//		echo '<tr>
-//			<td align="left"><input type="button" onclick="delete()">Delete</td>
-//			<td align="left">' . $row['title'] . '</td>
-//			<td align="left">' . $row['genre'] . '</td>
-//			<td align="left">' . $row['session'] . '</td>
-//      		<td align="left">'.$_POST['tickets'].'</td>
-//      		<td align="left">'.$_POST['armchair'].'</td>
-//		</tr>
-//		';
-//	}
-//
-//	echo '</tbody></table>';
-//        
-//    }
+     $errors = []; // Initialize an error array.
+	// Check for a first name:
+	if (empty($_POST['tickets'])) {
+		$errors[] = 'no ingresaste numero de tickets';
+	} else {
+		$ar = mysqli_real_escape_string($dbm, trim($_POST['tickets']));
+ 	} 
+ 
      
-
- }
+     
+	if (empty($errors)) { // If everything's OK.
+		// Register the user in the database...
+		// Make the query:
+		$q = "INSERT INTO purchase (movie_id, armchair_id) VALUES ('$mi', '$ar')";
+		$r = @mysqli_query($dbm, $q); // Run the query.agarra la query y lo envia a la base de datos 
         
+ 
+		 
+	} else { // Report the errors.
+		echo '<h1>Error!</h1>
+		<p class="error">The following error(s) occurred:<br>';
+		foreach ($errors as $msg) { // Print each error.
+			echo " - $msg<br>\n";
+		}
+		echo '</p><p>Please try again.</p><p><br></p>';
+	} // End of if (empty($errors)) IF.
      
+ }
 ?>
+ 
 
 
 <form action="armchairs.php" method="post">
