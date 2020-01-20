@@ -7,7 +7,7 @@ echo '<h1>Purchase</h1>';
 require('../mysqli_connect.php');
 
 // Define the query:
-$q = "SELECT title, genre, session FROM movies";
+$q = "SELECT title, genre, session FROM movies WHERE movie_id = 1";
 $r = @mysqli_query($dbm, $q);
 
 // Count the number of returned rows:
@@ -15,17 +15,18 @@ $num = mysqli_num_rows($r);
 
 if ($num > 0) { // If it ran OK, display the records.
 
-function delete(){
+// function delete(){
   
-}
+// }
 
 	echo "<p>These are your selected movies.</p>\n";
 
+	//<th align="left"><strong>Delete</strong></th>
 	// Table header:
 	echo '<table width="60%">
 	<thead>
 	<tr>
-		<th align="left"><strong>Delete</strong></th>
+
 		<th align="left"><strong>Title</strong></th>
 		<th align="left"><strong>Genre</strong></th>
 		<th align="left"><strong>Session</strong></th>
@@ -36,15 +37,16 @@ function delete(){
 	<tbody>
 	';
 
+	//<td align="left"><input type="button" onclick="delete()">Delete</td>
 	// Fetch and print all the records:
 	while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 		echo '<tr>
-			<td align="left"><input type="button" onclick="delete()">Delete</td>
+			
 			<td align="left">' . $row['title'] . '</td>
 			<td align="left">' . $row['genre'] . '</td>
 			<td align="left">' . $row['session'] . '</td>
-      			<td align="left">'.$_POST['tickets'].'</td>
-      			<td align="left">'.$_POST['armchairs'].'</td>
+      		<td align="left">'.$_POST['tickets'].'</td>
+      		<td align="left">'.$_POST['sillas'].'</td>
 		</tr>
 		';
 	}
@@ -60,3 +62,4 @@ mysqli_close($dbm);
 
 include('includes/footer.html');
 ?>
+
