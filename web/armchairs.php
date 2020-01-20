@@ -62,6 +62,8 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
       $num = mysqli_num_rows($s);
             if ($num > 0) { // If it ran OK, display the records.
             while ($row = mysqli_fetch_array($s, MYSQLI_ASSOC)) {
+            echo '<div class="texto"> '.$row['armchair_id'].'º-</div>' ;
+
             echo '<img   onclick="cambia(this.id)"  width="9%" id="'.$row['armchair_id'].'" src="'.$row['image'].'" name="sillas">'; 
                 } 
             }     
